@@ -36,7 +36,8 @@
             channel.bind('received_email', function(data) {
                 document.getElementById("text_content").innerHTML = "<p><b>Email enviado por:</b> " + data.parameters.from + "</p>" + 
                 "<p><b>Para:</b> " + data.parameters.to + "</p>" +
-                "<p><b>Com o conteúdo HTML:</b>" + data.parameters.html + "</p>" +
+                "<p><b>Com o assunto: </b>" + data.parameters.subject +
+                "<p><b>Conteúdo HTML:</b>" + data.parameters.html + "</p>" +
                 "<p><b>E conteúdo simples:</b></p><p>" + data.parameters.text + "</p>";
             });
             

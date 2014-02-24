@@ -35,10 +35,12 @@
 
             var div = document.getElementById("text_content");
 
-            channel.bind('received_email', function(data) {
-              //div.innerHTML("<p>Last email from: " + data.parameters.from + "</p>");
+            var fpush = function(data) {
+                //div.innerHTML("<p>Last email from: " + data.parameters.from + "</p>");
               alert(data.parameters.from);
-            });
+            };
+
+            channel.bind('received_email', fpush);
             
             var tchannel = pusher.subscribe('test_channel');
             tchannel.bind('my_event', function(data) {

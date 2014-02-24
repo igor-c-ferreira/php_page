@@ -36,7 +36,7 @@
             var div = document.getElementById("text_content");
 
             channel.bind('received_email', function(data) {
-              div.innerHTML("<p>Last email from:</p><p>");
+              //div.innerHTML("<p>Last email from: " + data.parameters.from + "</p>");
               alert(data.parameters.from);
             });
             

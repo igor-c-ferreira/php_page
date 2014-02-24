@@ -33,8 +33,8 @@
             });
             var channel = pusher.subscribe('sendgrid_email_parser');
             channel.bind('received_email', function(data) {
-              document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
-              alert(data.parameters.from);
+              //document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
+              alert(data);
             });
             
             var tchannel = pusher.subscribe('test_channel');

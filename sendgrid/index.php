@@ -35,7 +35,9 @@
             channel.bind('received_email', function(data) {
               document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
             });
-            channel.bind('my_event', function(data) {
+            
+            var tchannel = pusher.subscribe('test_channel');
+            tchannel.bind('my_event', function(data) {
                 alert(data.message);
             });
 

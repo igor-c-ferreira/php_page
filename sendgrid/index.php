@@ -34,10 +34,10 @@
             var channel = pusher.subscribe('sendgrid_email_parser');
 
             channel.bind('received_email', function(data) {
-                document.getElementById("text_content").innerHTML = "<p>Last email from: " + data.parameters.from + "</p>" + 
-                "<p>To: " + data.parameters.to + "</p>" +
-                "<p>With HTML content:" + data.parameters.html + "</p>" +
-                "<p>And raw text content:" + data.parameters.text + "</p>";
+                document.getElementById("text_content").innerHTML = "<p><b>Email enviado por:</b> " + data.parameters.from + "</p>" + 
+                "<p><b>Para:</b> " + data.parameters.to + "</p>" +
+                "<p><b>Com o conteúdo HTML:</b>" + data.parameters.html + "</p>" +
+                "<p><b>E conteúdo simples:</b></p><p>" + data.parameters.text + "</p>";
             });
             
             var tchannel = pusher.subscribe('test_channel');

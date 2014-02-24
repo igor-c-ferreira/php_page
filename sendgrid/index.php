@@ -22,11 +22,21 @@
 
         <!-- Controller imports -->
         <script type="text/javascript">
-            var pusher = new Pusher('461c8c8ac40ee3dc274d');
-            var channel = pusher.subscribe('sendgrid_email_parser');
+            Pusher.log = function(message) {
+              if (window.console && window.console.log) {
+                window.console.log(message);
+              }
+            };
 
-            channel.bind('received_email',function(data){
-                document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
+            var pusher = new Pusher('461c8c8ac40ee3dc274d', {
+              cluster: 'eu'
+            });
+            var channel = pusher.subscribe('sendgrid_email_parser');
+            channel.bind('received_email', function(data) {
+              document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
+            });
+            channel.bind('my_event', function(data) {
+                alert(data.message);
             });
 
         </script>

@@ -33,14 +33,10 @@
             });
             var channel = pusher.subscribe('sendgrid_email_parser');
 
-            var div = document.getElementById("text_content");
-
-            var fpush = function(data) {
-                //div.innerHTML("<p>Last email from: " + data.parameters.from + "</p>");
-              alert(data.parameters.from);
-            };
-
-            channel.bind('received_email', fpush);
+            channel.bind('received_email', function(data) {
+                document.getElementById("text_content").innerHTML = "<p>Last email from:</p><p>" + data.parameters.from + "</p>";
+                alert(data.parameters.from);
+            });
             
             var tchannel = pusher.subscribe('test_channel');
             tchannel.bind('my_event', function(data) {

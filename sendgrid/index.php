@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="pt-br">
     <head>
-        <title>HTML5 Javascript Tutorial</title>
+        <title>Sendgrid</title>
 
         <!-- Meta tags -->
         <meta content="text/html; charset=utf-8" http-equiv="content-type">
@@ -40,12 +40,6 @@
                 "<p><b>Conteúdo HTML:</b>" + data.parameters.html + "</p>" +
                 "<p><b>E conteúdo simples:</b></p><p>" + data.parameters.text + "</p>";
             });
-            
-            var tchannel = pusher.subscribe('test_channel');
-            tchannel.bind('my_event', function(data) {
-                alert(data.message);
-            });
-
         </script>
 
     </head>
@@ -53,14 +47,11 @@
     <body>
         <div data-role="page" id="ajax">
             <div data-role="header">
-                <h1>Ajax</h1>
+                <h1>Sendgrid</h1>
             </div>
             <div role="main" class="ui-content">
                 <div id="text_content">
                 </div>
-            </div>
-            <div data-role="footer">
-                <h4>Page footer</h4>
             </div>
         </div>
     <body>

@@ -1,0 +1,17 @@
+<table border='1' id="content_table">
+	<tr>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Age</th>
+		<th>Hometown</th>
+		<th>Job</th>
+	</tr>
+
+	<tr>
+		<td>Igor</td>
+		<td>Ferreira</td>
+		<td>23</td>
+		<td>Sao Paulo</td>
+		<td>Programmer</td>
+	</tr>
+</table>

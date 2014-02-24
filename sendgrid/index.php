@@ -34,7 +34,7 @@
             var channel = pusher.subscribe('sendgrid_email_parser');
             channel.bind('received_email', function(data) {
               //document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
-              alert(data);
+              alert(data.parameters.from);
             });
             
             var tchannel = pusher.subscribe('test_channel');

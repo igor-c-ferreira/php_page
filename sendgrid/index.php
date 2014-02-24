@@ -32,9 +32,11 @@
               cluster: 'eu'
             });
             var channel = pusher.subscribe('sendgrid_email_parser');
+
+            var div = document.getElementById("text_content");
+
             channel.bind('received_email', function(data) {
-                $("text_content").update("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
-              //document.getElementById("text-content").innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
+              div.innerHTML("<p>Last email from:</p><p>" + data.parameters.from + "</p>");
               alert(data.parameters.from);
             });
             

@@ -12,6 +12,7 @@ document.write("<!-- Start of first page -->" +
 			"<p>View internal page called <a id=\"bar\" href=\"#bar\">bar</a></p>" + 
 			"<p>View an example of the use of <a id=\"database\" href=\"database.php\" rel=\"external\">database</a></p>" +
 			"<p>See an example of <a href=\"ajax.php\" rel=\"external\">Ajax request</a></p>" + 
+			"<p>See an example of <a href=\"widgets/index.php\" rel=\"external\">jQuery widgets</a></p>" +
 		 "</div>" + 
 		 "<!-- /content -->" + 
 		 "<div data-role=\"footer\">" + 

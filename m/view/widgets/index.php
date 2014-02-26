@@ -35,6 +35,7 @@
 
 		<div role="main" class="ui-content">
 			<p><a href="range_slider.php" rel="external">Range Slider</a></p>
+			<a href="javascript:void(0);" onclick="history.go(-1);">Voltar</a>
 		</div><!-- /content -->
 
 		<div data-role="footer">

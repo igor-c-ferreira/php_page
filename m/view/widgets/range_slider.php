@@ -24,6 +24,7 @@
     </script>
   </head>
   <body>
+    <a href="javascript:void(0);" onclick="history.go(-1);">Voltar</a>
     <p>
       <label for="quantia">Range selecionado:</label>
       <input type="text" id="quantia" style="border:0; color:#f6931f; font-weight:bold;">

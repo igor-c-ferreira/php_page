@@ -24,12 +24,10 @@
     </script>
   </head>
   <body>
-
     <p>
       <label for="quantia">Range selecionado:</label>
       <input type="text" id="quantia" style="border:0; color:#f6931f; font-weight:bold;">
     </p>
-
     <div id="slider-range" style="margin-left:2%; margin-right:2%"></div>
   </body>
 </html>
